@@ -11,6 +11,7 @@ public class PersonPrinterTest {
   public void testDefault() {
     Person harrison = Person.builder().firstname("John").lastname("Harrison").build();
 
+    harrison.test();
     assertEquals("John Harrison", new PersonPrinter(harrison).toString());
   }
 
