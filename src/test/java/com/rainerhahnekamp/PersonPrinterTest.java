@@ -1,6 +1,6 @@
 package com.rainerhahnekamp;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import com.hahnekamp.jacocolombok.PersonPrinter;
 import com.hahnekamp.jacocolombok.Person;
@@ -20,5 +20,11 @@ public class PersonPrinterTest {
     Person anonymous = Person.builder().firstname("anonymous").lastname("").build();
 
     assertEquals("", new PersonPrinter(anonymous).toString());
+  }
+
+  @Test
+  public void testFailure() {
+    
+    assertTrue("Zut", false);
   }
 }
